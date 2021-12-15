@@ -1,0 +1,9 @@
+extend type Mutation @guard {
+    createTest(input: CreateTestInput! @spread): Message
+        @field(resolver: "TestMutator")
+}
+
+input CreateTestInput {
+    test_name: String!
+    test_description: String!
+}

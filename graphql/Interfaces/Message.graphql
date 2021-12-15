@@ -1,0 +1,11 @@
+interface Message {
+    message: String!
+}
+
+type Success implements Message {
+    message: String!
+}
+
+type Error implements Message {
+    message: String!
+}

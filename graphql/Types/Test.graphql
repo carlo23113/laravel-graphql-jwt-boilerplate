@@ -1,0 +1,11 @@
+extend type Query @guard {
+    tests: [Test] @all
+    test(test_id: ID! @eq): Test @find
+}
+
+type Test {
+    test_id: ID!
+    test_name: String!
+    test_description: String!
+}
+
